@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demo">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Expense Manager</title>
+    <!-- scripts -->
+    <script src="../js/core/angular.min.js"></script>
+    <script src="../js/core/angular-route.min.js"></script>
+    <script src="../js/core/jquery-1.12.0.min.js"></script>
+    <script src="../js/core/bootstrap.min.js"></script>
+    <script src="../js/core/chart.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="../js/core/ui-bootstrap-tpls-1.1.1.min.js"></script>
+
+
+    <script src="../js/app.js"></script>
+    <script src="../js/factory.js"></script>
+    <script src="../js/controller.js"></script>
+    <script src="../js/route.js"></script>
+    <script src="../js/httpFacade.js"></script>
+    <script src="../js/directive.js"></script>
+    <script src="../js/filter.js"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/run.js"></script>
+    <script src="../js/constant.js"></script>
+
+
+    <link rel="stylesheet" href="../js/core/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../js/core/bootstrap/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body ng-controller="MainController">
+    <div class="container">
+        <div class="row">
+            <div class="page-header col-md-9">
+                <h2>{{title}} <small>{{version}}</small></h2>
+            </div>
+            <div class="col-md-3">
+                <!--<img class="img-responsive img-circle pull-right" src="../image/male_user.jpg" />-->
+            </div>
+        </div>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li id="home"><a href="#/">Home</a></li>
+                    <li id="viewExp"><a href="#viewExp ">{{view_exp_title}}</a></li>
+                    <li id="addExp"><a href="#addExp ">{{add_exp_title}}</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="processing" style="display:none"><img src="../image/spinner.gif" /></div>
+        <div ng-view=" ">
+            <!-- dynamic page load -->
+        </div>
+    </div>
+
+</body>
+
+</html>

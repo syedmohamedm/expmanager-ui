@@ -1,0 +1,43 @@
+{
+    "expenses": [{
+        "date": "01-01-2015",
+        "category": "Fuel",
+        "amount": 1000
+   }, {
+        "date": "01-01-2015",
+        "category": "Medical",
+        "amount": 200
+    }, {
+        "date": "01-01-2015",
+        "category": "Fuel",
+        "amount": 1000
+   }, {
+        "date": "01-01-2015",
+        "category": "Medical",
+        "amount": 200
+    }, {
+        "date": "01-01-2015",
+        "category": "Fuel",
+        "amount": 1000
+   }, {
+        "date": "01-01-2015",
+        "category": "Medical",
+        "amount": 200
+    }, {
+        "date": "01-01-2015",
+        "category": "Fuel",
+        "amount": 1000
+   }, {
+        "date": "01-04-2015",
+        "category": "Medical",
+        "amount": 200
+    }, {
+        "date": "01-03-2015",
+        "category": "Fuel",
+        "amount": 1000
+   }, {
+        "date": "01-02-2015",
+        "category": "Medical",
+        "amount": 200
+    }]
+}
