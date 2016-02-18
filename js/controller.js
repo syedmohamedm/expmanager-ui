@@ -13,11 +13,10 @@ controllers.MainController = function ($scope, $log, expenseHttpFacade) {
 controllers.ChartController = function ($scope, $log, expenseHttpFacade) {
     $log.debug('ChartController started');
 
-    expenseHttpFacade.getAllExpensesForChart()
-        .success(function (data, status, headers, config) {
+    expenseHttpFacade.getAllExpensesForChart().query().$promise
+        .then(function (data, status, headers, config) {
             $scope.loadChartJS(data);
-        })
-        .error(function (data, status, headers, config) {
+        }), (function (data, status, headers, config) {
             $log.debug('Error fetching all expenses for chart');
         });
     expenseHttpFacade.getAllExpensesForBarChart()

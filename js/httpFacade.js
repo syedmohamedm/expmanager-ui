@@ -1,4 +1,4 @@
-app.factory('expenseHttpFacade', function ($http) {
+app.factory('expenseHttpFacade', function ($http, $resource) {
     var _getCategories = function () {
         return $http.get('http://localhost:9000/category/list');
     }
@@ -15,16 +15,16 @@ app.factory('expenseHttpFacade', function ($http) {
         return $http.get('http://localhost:9000/expense/find/' + id);
     }
 
-    var _getAllExpensesForChart = function (id) {
-        return $http.get('http://localhost:9000/expense/chart/pie');
-    }
-
     var _deleteExpense = function (id) {
         return $http.get('http://localhost:9000/expense/delete/' + id);
     }
 
     var _getAllExpensesForBarChart = function (id) {
         return $http.get('http://localhost:9000/expense/chart/bar');
+    }
+
+    var _getAllExpensesForChart = function (id) {
+        return $resource('http://localhost:9000/expense/chart/pie');
     }
 
     return {
