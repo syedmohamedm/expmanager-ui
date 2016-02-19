@@ -36,15 +36,7 @@
 
 <body ng-controller="MainController">
     <div class="container">
-        <div class="row">
-            <div class="page-header col-md-9">
-                <h2>{{title}} <small>{{version}}</small></h2>
-            </div>
-            <div class="col-md-3">
-                <!--<img class="img-responsive img-circle pull-right" src="../image/male_user.jpg" />-->
-            </div>
-        </div>
-
+        <div ng-include="'../html/header.html'"></div>
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <ul class="nav navbar-nav">
@@ -59,7 +51,6 @@
             </div>
         </nav>
 
-        <div id="processing" style="display:none"><img src="../image/spinner.gif" /></div>
         <div ng-view=" ">
             <!-- dynamic page load -->
         </div>
